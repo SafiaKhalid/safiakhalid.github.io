@@ -1,7 +1,107 @@
-* {
+html {
     font-family: Arial, Helvetica, sans-serif;
+    color: #2a2a2a;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;    ;
 }
 
-header > h1 {
-    color: aqua;
+header > h1 {    
+    font-size: 3em;
+}
+
+body > main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5em;
+}
+
+main > form {
+    display: grid;
+    width: 600px;
+    height: 600px;
+    grid: [row1-start] 'input output' 1fr [row1-end]
+        [row2-start] 'generate generate' 1fr [row2-end]
+        /1fr 1fr;    
+    align-items: center;
+    justify-content: center;    
+}
+
+form .colour-box {
+    border: solid #2a2a2a 5px;    
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+form > #user-input {
+    grid-area: input;        
+}
+
+form > #generated-output {
+    grid-area: output;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    justify-content: center;    
+    height: 25em;
+}
+
+div > h4 {
+    font-size: 1.5em;
+}
+
+div > input {
+    border: none;
+    font-size: 2em;    
+    text-align: center;    
+    margin: 1.5em auto; 
+    background: none;
+    border: solid #2a2a2a00 2px;   
+    color: #2a2a2a;    
+    width: 50%;
+}
+
+div > input:hover {
+    cursor: pointer;
+    border: solid #2a2a2a 2px;   
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+div > input:focus {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+div > p {
+    font-size: 2em;    
+    text-align: center;
+    margin: 1.5em auto;
+    padding: 4px 0;
+}
+
+form > input {    
+    font-size: 2em;    
+    padding: 0.5em 0.75em;
+    grid-area: generate;
+    justify-self: center;
+    align-self: self-start;
+    background: none;
+    color: #2a2a2a;
+    font-weight: bold;
+    border: solid #2a2a2a 5px;  
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+form > input:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
